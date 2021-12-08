@@ -1,6 +1,6 @@
 exports.up = async function (knex) {
   await knex.schema.createTable('cars', table => {
-    table.increments('cars_id') // is the one with `increments` automatically the primary key? or the first one with increments?
+    table.increments('cars_id') 
     
     table.text('vin', 17) // vin numbers are 17 characters
       .notNullable().unique()
